@@ -31,8 +31,11 @@ An AI-powered Streamlit web app that analyzes how well a resume matches a job de
 ```bash
 git clone https://github.com/Sbatchu1901/jobfit-gpt-app.git
 cd jobfit-gpt-app
+pip install -r requirements.txt
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 streamlit run job_app.py
 
 ✍️ Author
 Srujan Kumar Batchu
-🔗 LinkedIn
+🔗 https://www.linkedin.com/in/srujan-kumar-batchu-17418b221/
+
