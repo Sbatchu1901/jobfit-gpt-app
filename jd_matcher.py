@@ -16,7 +16,7 @@ def compute_similarity(resume_text, job_desc):
     job_desc = clean_text(job_desc)
 
     # Compute TF-IDF vectors
-    vectorizer = TfidfVectorizer()
+    vectorizer = TfidfVectorizer(stop_words="english")  # ✅ Filters common words like "the", "is", etc.
     tfidf_matrix = vectorizer.fit_transform([resume_text, job_desc])
 
     # Compute cosine similarity
