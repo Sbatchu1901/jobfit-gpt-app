@@ -20,15 +20,15 @@ if uploaded_file and job_description and st.button("🔍 Analyze Resume"):
 
     with st.spinner("Analyzing..."):
         score, matched_skills, missing_skills = compute_similarity(resume_text, job_description)
-        #feedback = get_gpt_feedback(resume_text, job_description)
+        feedback = get_llm_feedback(resume_text, job_description)
 
 
     st.subheader(f"🎯 Match Score: {score}%")
     st.markdown(f"**✅ Matched Skills:** {', '.join(matched_skills)}")
     st.markdown(f"**❌ Missing Skills:** {', '.join(missing_skills)}")
     st.markdown("---")
-    #st.subheader("🧠 GPT Resume Feedback")
-    #st.write(feedback)
+    st.subheader("🧠 GPT Resume Feedback")
+    st.write(feedback)
 
 else:
     st.info("Please upload a resume and paste a job description to begin analysis.")
